@@ -5,7 +5,7 @@ var Comment = require("./models/comment");
 var data = [
   { name: "Happy Feet",
     image: "http://haileyidaho.com/wp-content/uploads/2015/01/Stanley-lake-camping-Credit-Carol-Waller-2011.jpg",
-    description: "Hello there"
+    description: "Hello there this is long a description spellling does not matter or the words i just need to use space, blahh bahh idk"
   },
   { name: "Happy Feet",
     image: "http://haileyidaho.com/wp-content/uploads/2015/01/Stanley-lake-camping-Credit-Carol-Waller-2011.jpg",
@@ -35,13 +35,13 @@ function seedDB(){
               text:"This place is awesome",
               author:"Homie",
             }, function(err, comment){
-              if(err){
-                console.log(err);
-              }else{
-              campground.comments.push(comment);
-              campground.save();
-              console.log("created new comment");
-            }
+                if(err){
+                  console.log(err);
+                }else{
+                campground.comments.push(comment);
+                campground.save();
+                console.log("created new comment");
+              }
             }
           )
         }
