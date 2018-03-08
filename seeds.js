@@ -11,10 +11,6 @@ var data = [
     image: "http://haileyidaho.com/wp-content/uploads/2015/01/Stanley-lake-camping-Credit-Carol-Waller-2011.jpg",
     description: "Hello there"
   },
-  { name: "Happy Feet",
-    image: "http://haileyidaho.com/wp-content/uploads/2015/01/Stanley-lake-camping-Credit-Carol-Waller-2011.jpg",
-    description: "Hello there"
-  }
 ]
 
 function seedDB(){
