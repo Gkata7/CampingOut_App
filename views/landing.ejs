@@ -1,8 +1,56 @@
-<% include partials/header %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CampingOut</title>
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
 
-<h1>Landing Page</h1>
-<p>Welcome to CampingOut</p>
+  <nav class = "navbar navbar-default" id="to-front">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class = "sr-only">Toggle Navigation</span>
+          <span class ="icon-bar"></span>
+          <span class ="icon-bar"></span>
+          <span class ="icon-bar"></span>
+        </button>
+        <a class ="navbar-brand" href="/">CampingOut</a>
+      </div>
 
-<a href="/campgrounds">View all campgrounds</a>
+      <div class="collapse navbar-collapse" id +"bs-example-navbar-collapse-1">
+        <ul class ="nav navbar-nav navbar-right">
+          <% if (!currentUser) { %>
+            <li><a href="/register"><i class="fa fa-user plus" aria-hidden="true"></i>Sign Up</a></li>
+            <li><a href="/login"><i class="fa fa-user plus" aria-hidden="true"></i>Login</a></li>
+          <% } else { %>
+            <li class="active"><a href = ""><i class="fa fa-user" aria-hidden="true"></i><%= currentUser.username %></a></li>
+            <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+
+    <div id="landing-header">
+  	<h1>Welcome to CampingOut!</h1>
+  	<a href="/campgrounds" class="btn btn-lg btn-primary">Get Started!</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
 
 <% include partials/footer %>

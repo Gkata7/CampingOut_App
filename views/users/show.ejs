@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+
+<div class="card">
+  <img class ="profile" src="<%= user.avatar %>" alt="User Profile Image">
+  <h1><%= user.firstName + " " + user.lastName %></h1>
+  <p>
+    <a href = "mailto:<%= user.email %>"><%= user.email %></a>
+  </p>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <p><button class="user-button">Contact</button></p>
+  <a href="/campgrounds/">Back Home</a>
+</div>
+
+
+
+
+
+<% include ../partials/footer %>
