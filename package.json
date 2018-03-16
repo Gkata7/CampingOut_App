@@ -5,14 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "node app.js"
 },
   "author": "Garrett Katashima",
   "license": "ISC",
-    "engines": {
-      "node":"^8.10.0",
-    },
-    "dependencies": {
+  "dependencies": {
       "body-parser": "^1.18.2",
       "connect-flash": "^0.1.1",
       "ejs": "^2.5.7",
@@ -30,4 +27,7 @@
       "passport-local": "^1.0.0",
       "passport-local-mongoose": "^5.0.0"
   },
+  "engines": {
+    "node":"8.10.0"
+  }
 }
