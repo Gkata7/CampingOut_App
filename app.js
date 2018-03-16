@@ -49,6 +49,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.listen(3000,process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
   console.log("Server Has Started")
 });
