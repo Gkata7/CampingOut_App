@@ -16,7 +16,7 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     authRoutes = require("./routes/index");
 
-// mongoose.connect("mongodb://localhost/CampingOut");
+// mongoose.connect(process.env.DATABASEURL);
 mongoose.connect("mongodb://kobe:warriors@ds217349.mlab.com:17349/campingout");
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -50,6 +50,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, process.env.PORT, process.env.IP, function(){
   console.log("Server Has Started")
 });
