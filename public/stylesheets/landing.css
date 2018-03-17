@@ -2,8 +2,12 @@ body {
   background-image: url("http://fotohomka.ru/images/Oct/25/6aa0265b9acf110908247b1917cf80f2/1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-position: center center fixed;
+  background-size: 100;
+  -webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
+  -moz-background-size: cover; /* Used by Firefox */
+  -o-background-size: cover; /* Used by Opera */
+  background-size: cover; /* All Modern Browsers */
 }
 #landing-header {
   z-index: 1;
